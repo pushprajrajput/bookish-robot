@@ -1,0 +1,22 @@
+{
+  "name": "bookish-robot",
+  "version": "1.0.0",
+  "description": "DSA in Typescript",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pushprajrajput/bookish-robot.git"
+  },
+  "author": "Pushpraj Rajput",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pushprajrajput/bookish-robot/issues"
+  },
+  "homepage": "https://github.com/pushprajrajput/bookish-robot#readme",
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}
