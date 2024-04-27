@@ -112,6 +112,55 @@ export class SinglyLinkedList<T> {
     }
   }
 
+  deleteAtIndex(index: number) {
+    if (index === 0) {
+      if (this.head) {
+        this.head = this.head.next;
+        if (this.head === null) {
+          // If list becomes empty
+          this.tail = null;
+        }
+      }
+      return;
+    }
+
+    let current = this.head;
+    let currentIndex = 0;
+
+    while (current !== null && currentIndex < index - 1) {
+      current = current.next;
+      currentIndex++;
+    }
+
+    if (current === null || current.next === null) {
+      // index is out of bounds
+      return;
+    }
+
+    if (current.next === this.tail) {
+      this.tail = current; // Update tail if last element is removed
+    }
+
+    current.next = current.next.next;
+  }
+
+  getNodeAtIndex(index: number): ListNode<T> | null {
+    let current = this.head;
+    let currentIndex = 0;
+
+    while (current !== null && currentIndex < index) {
+      current = current.next;
+      currentIndex++;
+    }
+
+    if (current === null || currentIndex < index) {
+      // Index out of bounds
+      return null;
+    }
+
+    return current;
+  }
+
   print() {
     let current = this.head;
     let items: T[] = [];
